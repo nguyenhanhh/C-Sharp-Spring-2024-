@@ -72,18 +72,16 @@ namespace WaterBill
             switch (type)
             {
                 case 1:
-                    Console.Write("Enter number of people: ");
-                    int number = int.Parse(Console.ReadLine());
-                    if (number > 0 && number <= 10)
+                    if (consumption > 0 && consumption <= 10)
                     {
                         price = consumption * HOUSEHOLD_PRICE_1;
              
                     }
-                    else if (number > 10 && number <= 20)
+                    else if (consumption > 10 && consumption <= 20)
                     {
                         price =  consumption * HOUSEHOLD_PRICE_2;
                     }
-                    else if (number > 20 && number <= 30)
+                    else if (consumption > 20 && consumption <= 30)
                         price = consumption * HOUSEHOLD_PRICE_3;
                     else
                         price = consumption * HOUSEHOLD_PRICE_4;
