@@ -57,22 +57,20 @@ namespace asm1
             switch (type)
             {
                 case 1:
-                    Console.Write("Enter number of people: ");
-                    int number = int.Parse(Console.ReadLine());
                     typeOfCustomer = "Household customer";
-                    if (number > 0 && number <= 10)
+                    if (consumption > 0 && consumption <= 10)
                     {
                         price = (consumption * 5.973);
                         Console.WriteLine($"Water price for {typeOfCustomer} is: 5.973 VND/m3");
 
                     }
-                    else if (number > 10 && number <= 20)
+                    else if (consumption > 10 && consumption <= 20)
                     {
                         price = (consumption * 7.052);
                         Console.WriteLine($"Water price for {typeOfCustomer} is: 7.052 VND/m3");
 
                     }
-                    else if (number > 20 && number <= 30)
+                    else if (consumption > 20 && consumption <= 30)
                     {
                         price = (consumption * 8.699);
                         Console.WriteLine($"Water price for {typeOfCustomer} is: 8.699 VND/m3");
