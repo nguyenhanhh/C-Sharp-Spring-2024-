@@ -47,17 +47,16 @@ namespace WaterBill
         {
             Console.Write("Enter last month’s water meter readings: ");
             double lastWaterMeter = double.Parse(Console.ReadLine());
+            
+            Console.Write("Enter this month’s water meter readings: ");
+            double thisWaterMeter = double.Parse(Console.ReadLine());
+            
             //Check if thisWaterMeter < lastWaterMeter
-            double thisWaterMeter;
-            do
-            {
-                Console.Write("Enter this month’s water meter readings: ");
+            while (thisWaterMeter < lastWaterMeter){
+                Console.WriteLine("This month's water meter reading should be greater than last month's. Please re-enter.");
+                Console.Write("Re-enter this month’s water meter readings: ");
                 thisWaterMeter = double.Parse(Console.ReadLine());
-                if (thisWaterMeter < lastWaterMeter)
-                    Console.WriteLine("This month's water meter reading should be greater than last month's. Please re-enter.");
             }
-
-            while (thisWaterMeter < lastWaterMeter);
 
             double consumption = thisWaterMeter - lastWaterMeter;
 
